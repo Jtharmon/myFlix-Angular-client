@@ -43,6 +43,11 @@ addFavorite: any;
     });
   }
 
+  /**
+   * opens genre info dialog
+   * @param genre 
+   */
+
   openGenreDialog(genre: any): void {
     this.dialog.open(MovieDetailDialogComponent, {
       data: {
@@ -52,6 +57,11 @@ addFavorite: any;
     })
   }
 
+  /**
+   * opens synopsis tag to give description of movie
+   * @param synopsis 
+   */
+
   openSynopsisDialog(synopsis: string): void {
     this.dialog.open(MovieDetailDialogComponent, {
       data: {
@@ -60,6 +70,11 @@ addFavorite: any;
       }
     })
   }
+
+/** 
+ * opens director info dialog
+ * @param director 
+ */
 
   openDirectorDialog(director: any): void {
     this.dialog.open(MovieDetailDialogComponent, {

@@ -1,25 +1,20 @@
 <div class="movie-page">
-    <!-- <mat-card *ngFor="let movie of movies;">
-      <mat-card-header class="movie-header">
-        <mat-card-title>{{movie.Title}}</mat-card-title>
-        <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
-      </mat-card-header>
-      <img height="100%" src={{movie.ImagePath}} alt={{movie.Title}} />
-      <mat-card-actions> -->
-        <button mat-button color="primary" (click)="openGenreDialog(movie.Genre)">
-          Genre
-        </button>
-        <button mat-button color="primary" (click)="openDirectorDialog(movie.Director)">
-          Director
-        </button>
-        <button mat-button color="primary" (click)="openSynopsisDialog(movie.Description)">
-          Synopsis
-        </button>
-        <button class="fave-button" *ngIf="!isFavorite(movie._id)" mat-icon-button (click)="addFavorite(movie._id)" matTooltip="Add to favorites">
-          <!-- <mat-icon>favorite_border</mat-icon> -->
-          Favorites
-        </button>
-      <!-- </mat-card-actions>
-    </mat-card> -->
+  <div *ngFor="let movie of movies" class="movie-container">
+    <h2>{{ movie.Title }}</h2>
+    <p>Directed by: {{ movie.Director.Name }}</p>
+    <img [src]="movie.ImagePath" [alt]="movie.Title" class="movie-image" />
+
+    <div class="movie-actions">
+      <button (click)="openGenreDialog(movie.Genre)">Genre</button>
+      <button (click)="openDirectorDialog(movie.Director)">Director</button>
+      <button (click)="openSynopsisDialog(movie.Description)">Synopsis</button>
+      <button
+        *ngIf="!isFavorite(movie._id)"
+        (click)="addFavorite(movie._id)"
+        class="fave-button"
+      >
+        Favorites
+      </button>
+    </div>
   </div>
-  
+</div>

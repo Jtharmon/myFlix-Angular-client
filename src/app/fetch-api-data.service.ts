@@ -11,6 +11,9 @@ const apiUrl = 'https://movie-api-es93.herokuapp.com/';
   providedIn: 'root'
 })
 export class FetchApiDataService {
+  updateUserProfile(userData: { Username: string; Password: string; Email: string; }) {
+    throw new Error('Method not implemented.');
+  }
   // Inject the HttpClient module to the constructor params
   // This will provide HttpClient to the entire class, making it available via this.http
   constructor(private http: HttpClient) { }

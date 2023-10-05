@@ -15,10 +15,15 @@ import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     UserRegistrationFormComponent,
+    WelcomePageComponent,
+    ProfilePageComponent,
     //LoginComponent
   ],
   imports: [
@@ -34,7 +39,8 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
     MatIconModule,
     MatFormFieldModule,
     MatSnackBarModule,
-  ],
+    RouterModule.forRoot(routes)],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
